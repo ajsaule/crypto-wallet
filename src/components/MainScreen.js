@@ -13,7 +13,7 @@ const MainScreen = () => {
   const handleRemoveWallet = () => {
     let walletsCopy = wallets;
     walletsCopy.pop();
-    setWallets(walletsCopy);
+    setWallets([...walletsCopy]);
   };
 
   return (
