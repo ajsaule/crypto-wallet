@@ -10,8 +10,8 @@ let defaultWords = [
   'Is',
   'The',
   'Best',
-  'Bobz',
-  'Vagene',
+  'Lets',
+  'Gooooo',
 ];
 
 const Wallet = ({key}) => {
