@@ -1,26 +1,16 @@
 import React, {useState} from 'react';
 import './Wallet.css';
 
-let defaultWords = [
-  'Lets',
-  'Gooooo',
-  'Top',
-  'Kek',
-  'Navid',
-  'Is',
-  'The',
-  'Best',
-  'Lets',
-  'Gooooo',
-];
-
-const Wallet = ({key}) => {
-  const [words, setWords] = useState(defaultWords);
-
+const Wallet = ({key, removeSingle}) => {
   return (
     <div key={key} className="wallet-wrapper">
-      <div>{words[Math.floor(Math.random() * 10)]}</div>
-      <div>{words[Math.floor(Math.random() * 10)]}</div>
+      <div>
+        Currency: ETH <br /> Balance: $10,0000
+      </div>
+      <div>
+        Swap: <button>⇵</button>
+      </div>
+      <button onClick={(key) => removeSingle(key)}>X</button>
     </div>
   );
 };

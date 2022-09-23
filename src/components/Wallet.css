@@ -1,6 +1,9 @@
 .wallet-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid aquamarine;
   margin-top: 15px;
   background-color: cadetblue;
 }

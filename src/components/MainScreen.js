@@ -16,9 +16,17 @@ const MainScreen = () => {
     setWallets([...walletsCopy]);
   };
 
+  const handleRemoveSelectedWallet = (id) => {
+    let filteredWallets = wallets.filter((wallet, idx) => idx !== id);
+    setWallets(filteredWallets);
+  };
+
   return (
     <div className="main-screen-wrapper">
-      {wallets.map((item) => item)}
+      <h1>Your wallets:</h1>
+      {wallets.map((item, idx) => (
+        <Wallet key={idx} removeSingle={handleRemoveSelectedWallet} />
+      ))}
       <button onClick={handleAddWallet} className="add-button">
         +
       </button>
