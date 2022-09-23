@@ -10,10 +10,10 @@ const MainScreen = () => {
     setWallets([...wallets, <Wallet />]);
   };
 
-  // ! remove doesn't work at the moment
   const handleRemoveWallet = () => {
-    const letsGoooo = wallets.pop();
-    setWallets(letsGoooo);
+    let walletsCopy = wallets;
+    walletsCopy.pop();
+    setWallets(walletsCopy);
   };
 
   return (
